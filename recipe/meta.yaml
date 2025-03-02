@@ -14,11 +14,10 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
   number: 1
+  script_env:
+    - VERSION={{ version }}
 
 requirements:
-  build:
-    script_env:
-      - VERSION={{ version }}
   host:
     - python {{ python_min }}
     - pip
