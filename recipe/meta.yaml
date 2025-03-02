@@ -18,7 +18,7 @@ build:
 requirements:
   build:
     script_env:
-      VERSION={{ version }}
+      - VERSION={{ version }}
   host:
     - python {{ python_min }}
     - pip
