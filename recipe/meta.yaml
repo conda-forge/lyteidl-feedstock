@@ -1,5 +1,5 @@
 {% set name = "lyteidl" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.1" %}
 {% set python_max = "3.11" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lyteidl-{{ version }}.tar.gz
-  sha256: 9c5ebe96615e4fd03dd393c49f6356285be8e3860c58271ac7c8babc170165a8
+  sha256: 23202773d76e734929bfe9767cbf22f33db903b8a23a22e9be759c6afb932be9
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 1
+  number: 0
   script_env:
     - VERSION={{ version }}
 
